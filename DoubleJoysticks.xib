@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12120"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DoubleJoysticks">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="242"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kom-QT-DQZ">
+                    <rect key="frame" x="252" y="0.0" width="63" height="242"/>
+                    <color key="backgroundColor" red="0.33498375809999997" green="0.97680455450000003" blue="0.1375150812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gog-Q3-fQn">
+                    <rect key="frame" x="62" y="190" width="190" height="52"/>
+                    <color key="backgroundColor" red="0.98045176270000001" green="0.81270641089999995" blue="0.2228860855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzP-Un-c74">
+                    <rect key="frame" x="315" y="190" width="189" height="52"/>
+                    <color key="backgroundColor" red="0.98045176270000001" green="0.81270641089999995" blue="0.2228860855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-OF-w4O">
+                    <rect key="frame" x="505" y="0.0" width="63" height="190"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-ms-BgG">
+                    <rect key="frame" x="62.5" y="0.0" width="189.5" height="189.5"/>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.64313725489999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OPM-ms-BgG" secondAttribute="height" id="a7v-uM-aZt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iga-Jh-gl6">
+                    <rect key="frame" x="315" y="0.0" width="189" height="190"/>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.64313725489999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rzP-Un-c74" secondAttribute="bottom" id="3ue-7O-wsI"/>
+                <constraint firstAttribute="bottom" secondItem="gog-Q3-fQn" secondAttribute="bottom" id="5Vd-52-hG3"/>
+                <constraint firstItem="kom-QT-DQZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CGx-yb-3dy"/>
+                <constraint firstItem="rzP-Un-c74" firstAttribute="top" secondItem="iga-Jh-gl6" secondAttribute="bottom" id="CPh-rZ-0bV"/>
+                <constraint firstItem="rzP-Un-c74" firstAttribute="width" secondItem="iga-Jh-gl6" secondAttribute="width" id="CzC-Ay-nJE"/>
+                <constraint firstItem="OPM-ms-BgG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DmN-is-Wf3"/>
+                <constraint firstItem="iga-Jh-gl6" firstAttribute="width" secondItem="OPM-ms-BgG" secondAttribute="width" id="FDr-HR-DVq"/>
+                <constraint firstItem="kom-QT-DQZ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:9" id="Gyb-yh-54k"/>
+                <constraint firstItem="iga-Jh-gl6" firstAttribute="leading" secondItem="kom-QT-DQZ" secondAttribute="trailing" id="IBT-KR-TVx"/>
+                <constraint firstItem="iga-Jh-gl6" firstAttribute="height" secondItem="OPM-ms-BgG" secondAttribute="height" id="KNS-CU-UyC"/>
+                <constraint firstItem="iga-Jh-gl6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="L2f-lt-OhT"/>
+                <constraint firstItem="kom-QT-DQZ" firstAttribute="leading" secondItem="OPM-ms-BgG" secondAttribute="trailing" id="Mda-Cx-EF6"/>
+                <constraint firstItem="kom-QT-DQZ" firstAttribute="leading" secondItem="gog-Q3-fQn" secondAttribute="trailing" id="Qa5-BS-0QB"/>
+                <constraint firstItem="C5u-OF-w4O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tf1-YS-XKB"/>
+                <constraint firstItem="rzP-Un-c74" firstAttribute="leading" secondItem="kom-QT-DQZ" secondAttribute="trailing" id="Ua4-pe-blc"/>
+                <constraint firstItem="gog-Q3-fQn" firstAttribute="width" secondItem="OPM-ms-BgG" secondAttribute="width" id="WUa-uE-lBd"/>
+                <constraint firstItem="C5u-OF-w4O" firstAttribute="height" secondItem="iga-Jh-gl6" secondAttribute="height" id="hCf-ys-S2a"/>
+                <constraint firstItem="C5u-OF-w4O" firstAttribute="width" secondItem="kom-QT-DQZ" secondAttribute="width" id="nM9-Pc-2Bh"/>
+                <constraint firstItem="kom-QT-DQZ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="oiy-Y9-px0"/>
+                <constraint firstAttribute="trailing" secondItem="C5u-OF-w4O" secondAttribute="trailing" id="pJa-aH-Bv2"/>
+                <constraint firstItem="OPM-ms-BgG" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="6:18" id="qky-jg-Pxe"/>
+                <constraint firstItem="kom-QT-DQZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rqH-AV-YY9"/>
+                <constraint firstItem="gog-Q3-fQn" firstAttribute="top" secondItem="OPM-ms-BgG" secondAttribute="bottom" id="wk9-4M-gjb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftJoystickBackView" destination="OPM-ms-BgG" id="7b7-r2-06d"/>
+                <outlet property="rightJoystickBackView" destination="iga-Jh-gl6" id="B1h-mu-heQ"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="65"/>
+        </view>
+    </objects>
+</document>

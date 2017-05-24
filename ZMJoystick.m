@@ -11,7 +11,6 @@
 
 @interface ZMJoystick ()
 
-
 @property (weak, nonatomic) IBOutlet UIImageView *backImage;
 
 @property (weak, nonatomic) IBOutlet UIImageView *joystickImage;
