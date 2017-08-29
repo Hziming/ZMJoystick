@@ -93,8 +93,7 @@ static NSUInteger joystickVaule = 0xff;
 - (void)point:(CGPoint)point inCircleRect:(CGRect)rect {
     
     CGFloat r = rect.size.width/2.0;   //圆的半径
-    
-    CGPoint center = CGPointMake(rect.origin.x + r, rect.origin.y + r); //圆心坐标
+    CGPoint center = CGPointMake(rect.origin.x + r, rect.origin.y + r); //圆心
     
     double a = fabs(point.x - center.x);    // a            /|
     double b = fabs(point.y - center.y);    // b         c / |b
@@ -105,15 +104,24 @@ static NSUInteger joystickVaule = 0xff;
         self.joystickImage.center = point;
         
     } else {
-        double m = center.x;
-        double n = center.y;
-        
-        double cosθ = (point.x - center.x) / c;
-        double sinθ = (point.y - center.y) / c;
-        
-            //圆参数方程  x = m + r * cosθ, y = n + r * sinθ (m,n)为圆心
-        self.joystickImage.center = CGPointMake(m + r * cosθ ,  // x = m + r * cosθ
-                                                n + r * sinθ);  // y = n + r * sinθ
+        //圆参数方程 x = m + r*cosθ, y = n + r*sinθ   (m,n)为圆心
+        if (point.x > center.x && point.y < center.y) {         //一项限   以圆心为原点来分象限
+                                                    //     m + r * cosθ             n + r * sinθ
+            self.joystickImage.center = CGPointMake(center.x + r * (a / c) , center.y - r * (b / c));
+            
+        } else if (point.x < center.x && point.y < center.y) {  //二项限
+            
+            self.joystickImage.center = CGPointMake(center.x - r * (a / c) , center.y - r * (b / c));
+            
+        } else if (point.x < center.x && point.y > center.y) {  //三项限
+            
+            self.joystickImage.center = CGPointMake(center.x - r * (a / c) , center.y + r * (b / c));
+            
+        } else if (point.x > center.x && point.y > center.y) {  //四项限
+            
+            self.joystickImage.center = CGPointMake(center.x + r * (a / c) , center.y + r * (b / c));
+            
+        }
         
     }
                                                                                 //  (边长、直径)
@@ -129,7 +137,7 @@ static NSUInteger joystickVaule = 0xff;
     if (horizontal > 0.999)   horizontal = 1.0;
     if (horizontal < 0.001)   horizontal = 0.0;
     
-    NSLog(@"vertical:%.3f ---  horizontal:%.3f", vertical, horizontal);
+//    NSLog(@"vertical:%ld ---  horizontal:%ld", v, h);
     
     if (self.returnPar) {
         
