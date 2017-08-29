@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZMFineAdjustment">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="174"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DR-td-U2f">
+                    <rect key="frame" x="0.0" y="0.0" width="411" height="174"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-dc-mGg">
+                            <rect key="frame" x="0.0" y="62" width="51" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cAS-dc-mGg" secondAttribute="height" multiplier="1:1" id="F4G-Cl-KGU"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="-"/>
+                            <connections>
+                                <action selector="minusClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="x2m-ec-vzp"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="音量条" translatesAutoresizingMaskIntoConstraints="NO" id="zie-QX-gcV">
+                            <rect key="frame" x="51" y="62" width="309" height="51"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="音量调节" translatesAutoresizingMaskIntoConstraints="NO" id="19D-8P-PuW">
+                            <rect key="frame" x="51" y="55" width="51" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="19D-8P-PuW" secondAttribute="height" multiplier="4:5" id="8FX-Wd-Rpv"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oog-1h-VTE">
+                            <rect key="frame" x="360" y="62" width="51" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="oog-1h-VTE" secondAttribute="height" id="Zjv-SG-dkK"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="+"/>
+                            <connections>
+                                <action selector="addClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="VIe-sR-n1Y"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oog-1h-VTE" secondAttribute="trailing" id="Asx-Jh-E2q"/>
+                        <constraint firstItem="oog-1h-VTE" firstAttribute="width" secondItem="8DR-td-U2f" secondAttribute="width" multiplier="1:8" id="EJ0-Zu-Kam"/>
+                        <constraint firstItem="cAS-dc-mGg" firstAttribute="leading" secondItem="8DR-td-U2f" secondAttribute="leading" id="IDU-ia-kMM"/>
+                        <constraint firstItem="zie-QX-gcV" firstAttribute="centerY" secondItem="8DR-td-U2f" secondAttribute="centerY" id="S7Q-Yq-XEu"/>
+                        <constraint firstItem="cAS-dc-mGg" firstAttribute="width" secondItem="8DR-td-U2f" secondAttribute="width" multiplier="1:8" id="UDD-L0-U7W"/>
+                        <constraint firstItem="19D-8P-PuW" firstAttribute="leading" secondItem="zie-QX-gcV" secondAttribute="leading" id="ZIO-zv-s2l"/>
+                        <constraint firstItem="zie-QX-gcV" firstAttribute="height" secondItem="oog-1h-VTE" secondAttribute="height" id="aEz-Uc-4vh"/>
+                        <constraint firstItem="19D-8P-PuW" firstAttribute="height" secondItem="zie-QX-gcV" secondAttribute="height" multiplier="5:4" id="c3E-Sc-woo"/>
+                        <constraint firstItem="zie-QX-gcV" firstAttribute="centerX" secondItem="8DR-td-U2f" secondAttribute="centerX" id="cYY-yy-aSV"/>
+                        <constraint firstItem="zie-QX-gcV" firstAttribute="width" secondItem="8DR-td-U2f" secondAttribute="width" multiplier="3:4" id="hQF-Pr-Mxr"/>
+                        <constraint firstItem="19D-8P-PuW" firstAttribute="centerY" secondItem="zie-QX-gcV" secondAttribute="centerY" id="ieP-jg-PHa"/>
+                        <constraint firstItem="cAS-dc-mGg" firstAttribute="centerY" secondItem="8DR-td-U2f" secondAttribute="centerY" id="mTZ-mi-DWb"/>
+                        <constraint firstItem="oog-1h-VTE" firstAttribute="centerY" secondItem="8DR-td-U2f" secondAttribute="centerY" id="ypK-pW-7a7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8DR-td-U2f" secondAttribute="trailing" id="2hz-ln-yOr"/>
+                <constraint firstAttribute="bottom" secondItem="8DR-td-U2f" secondAttribute="bottom" id="cGe-nw-Uts"/>
+                <constraint firstItem="8DR-td-U2f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="j6M-C3-AQR"/>
+                <constraint firstItem="8DR-td-U2f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kBr-bP-nXk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftLayout" destination="ZIO-zv-s2l" id="JzT-sB-Tsl"/>
+                <outlet property="line" destination="zie-QX-gcV" id="YnK-UN-OmQ"/>
+                <outlet property="slider" destination="19D-8P-PuW" id="ZG1-qY-3Pj"/>
+            </connections>
+            <point key="canvasLocation" x="-167.5" y="-18"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="+" width="50" height="50"/>
+        <image name="-" width="50" height="50"/>
+        <image name="音量条" width="278" height="56"/>
+        <image name="音量调节" width="44" height="66"/>
+    </resources>
+</document>

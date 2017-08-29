@@ -8,6 +8,7 @@
 
 #import "ZMJoystick.h"
 
+static NSUInteger joystickVaule = 0xff;
 
 @interface ZMJoystick ()
 
@@ -39,9 +40,12 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.vertical = 0x80;
-    self.horizontal = 0x80;
+    self.vertical = joystickVaule * 0.5;
+    self.horizontal = joystickVaule * 0.5;
 }
+
+
+
 
 
 
@@ -80,8 +84,8 @@
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     self.joystickImage.center = self.backImage.center;
-    self.vertical = 0x80;
-    self.horizontal = 0x80;
+    self.vertical = joystickVaule * 0.5;
+    self.horizontal = joystickVaule * 0.5;
 }
 
 
@@ -133,12 +137,13 @@
     if (horizontal > 0.999)   horizontal = 1.0;
     if (horizontal < 0.001)   horizontal = 0.0;
     
+//    NSLog(@"vertical:%ld ---  horizontal:%ld", v, h);
     
     if (self.returnPar) {
         
-        NSUInteger v = vertical * 0xFF;
+        NSUInteger v = vertical * joystickVaule;
         
-        NSUInteger h = horizontal * 0xFF;
+        NSUInteger h = horizontal * joystickVaule;
 
         self.returnPar(v, h);
     }
@@ -158,13 +163,13 @@
     _horizontal = horizontal;
 }
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 }
-*/
+
 
 
 @end
